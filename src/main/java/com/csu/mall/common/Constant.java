@@ -9,4 +9,9 @@ public class Constant {
         int CUSTOMER = 0;//普通用户
         int ADMIN = 1; //管理员
     }
+
+    public interface CategoryStatus{
+        Boolean USING = Boolean.TRUE; //使用
+        Boolean DISCARD = Boolean.FALSE; //废弃
+    }
 }

@@ -11,6 +11,7 @@ import com.csu.mall.entity.User;
 import com.csu.mall.persistence.UserMapper;
 import com.csu.mall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.convert.support.ConversionServiceFactory;
 import org.springframework.stereotype.Service;
 import com.csu.mall.util.MD5Util;
 
@@ -196,6 +197,14 @@ public class UserServiceImpl implements UserService {
             return CommonResponse.creatForError("服务端异常");
         }
         return CommonResponse.creatForSuccessMesseage("退出成功");
+    }
+
+    @Override
+    public CommonResponse<String> checkAdminRole(User user){
+        if(user != null && user.getRole().equals(Constant.Role.ADMIN)){
+            return CommonResponse.creatForSuccess();
+        }
+        return CommonResponse.creatForError("当前用户不是管理员");
     }
 
 }

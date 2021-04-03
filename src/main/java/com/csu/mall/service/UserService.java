@@ -31,4 +31,6 @@ public interface UserService {
 
     CommonResponse<String> logout(User user);
 
+    CommonResponse<String> checkAdminRole(User user);
+
 }
