@@ -2,9 +2,6 @@ package com.csu.mall.service;
 
 import com.csu.mall.entity.User;
 import com.csu.mall.common.CommonResponse;
-import com.csu.mall.util.TokenCache;
-
-import javax.servlet.http.HttpSession;
 import javax.xml.stream.events.Comment;
 import java.net.CookieManager;
 

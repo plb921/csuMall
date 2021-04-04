@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
-@Service("CategoryService")
+@Service("categoryService")
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
