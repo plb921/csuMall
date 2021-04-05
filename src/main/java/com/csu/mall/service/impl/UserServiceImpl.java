@@ -143,6 +143,7 @@ public class UserServiceImpl implements UserService {
             return CommonResponse.creatForError("旧密码输入错误");
         }
         user.setPassword(MD5Util.md5Encrypt32Upper(passwordNew));
+        user.setUpdateTime(LocalDateTime.now());
         int rows = userMapper.updateById(user);
         if(rows == 0){
             return CommonResponse.creatForError("修改密码操作失效");

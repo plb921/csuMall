@@ -45,4 +45,9 @@ public class Constant {
     public interface ProductOrderBy{
         Set<String> ORDER_STRING=Sets.newHashSet("price_desc", "price_asc");
     }
+
+    public interface CartChecked{
+        Boolean CHOOSING = Boolean.TRUE; //选中
+        Boolean MISCHOOSING = Boolean.FALSE; //未选中
+    }
 }
