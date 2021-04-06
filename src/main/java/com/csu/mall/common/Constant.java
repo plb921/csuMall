@@ -50,4 +50,10 @@ public class Constant {
         Boolean CHOOSING = Boolean.TRUE; //选中
         Boolean MISCHOOSING = Boolean.FALSE; //未选中
     }
+
+    public interface ShippingUpdateType{
+        Set<String> TYPE = Sets.newHashSet(
+                "address_name", "address_phone", "address_mobile", "address_province",
+                "address_city", "address_district", "address_detail", "address_zip");
+    }
 }
